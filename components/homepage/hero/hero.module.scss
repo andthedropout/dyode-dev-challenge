@@ -1,0 +1,140 @@
+@import "../../../styles/mixins";
+
+.hero {
+    max-height: 100vh;
+
+    @include sm {
+        position: relative;
+    }
+
+    >div {
+        overflow: hidden;
+    }
+}
+
+.carouselDots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    height: 0px;
+    top: -2rem;
+
+    @include sm {
+        top: -2.5rem;
+    }
+
+    >button {
+        padding: .4rem;
+        margin: 0rem .3rem;
+        border-radius: 20px;
+        border: 0px;
+
+        @include md {
+            padding: .5rem;
+            margin: 0rem .5rem;
+        }
+    }
+}
+
+.textContainer {
+    top: -3px;
+    position: relative;
+    padding: 2rem;
+    font-size: .9rem;
+    background-color: $alternate-background;
+    text-align: center;
+
+    >p {
+        margin: 0;
+        padding: .6rem 0 1.2rem 0;
+    }
+
+    @include sm {
+        color: white;
+        padding-left: 3.5rem;
+        text-align: left;
+        background-color: transparent;
+        position: absolute;
+        top: 15%;
+
+        >h1 {
+            font-size: 2rem;
+        }
+    }
+
+    @include md {
+        top: 20%;
+        font-size: 1.1rem;
+
+        >h1 {
+            font-size: 3rem;
+        }
+    }
+
+    @include lg {
+        top: 25%;
+        font-size: 1.2rem;
+
+        >h1 {
+            font-size: 4rem;
+        }
+    }
+
+    >.shopBtn {
+        margin: auto;
+        color: $button-color;
+        background-color: $button-background;
+        font-size: $button-font-size;
+        padding: $button-padding;
+        border-width: $button-border-width;
+        border-style: $button-border-style;
+        text-transform: $button-text-transform;
+        border-radius: $border-radius;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    }
+}
+
+.alignRight {
+    @include sm {
+        >span {
+            >div {
+                top: 5%;
+                right: 3%;
+            }
+        }
+    }
+}
+
+.primaryColor {
+    @include sm {
+        >.textContainer {
+            color: $primary;
+        }
+    }
+}
+
+.buttonPrimary {
+    margin: auto;
+    color: $button-color;
+    font-size: $button-font-size;
+    background-color: $button-background;
+    padding: $button-padding;
+    border-width: $button-border-width;
+    border-style: $button-border-style;
+    text-transform: $button-text-transform;
+    border-radius: $border-radius;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    @include sm {
+        background-color: $primary;
+    }
+}

@@ -1,0 +1,75 @@
+@import "../../../styles/mixins";
+
+.productsList {
+    padding: 2rem;
+
+    >h1 {
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+}
+
+.carousel {
+    position: relative;
+    text-align: center;
+}
+
+.textContainer {
+    padding-top: 1rem;
+
+    >.title {
+        font-size: 1.5rem;
+        padding: .4rem 0rem;
+        margin: 0;
+        font-weight: 400;
+    }
+
+    >.subtitle {
+        margin: 0;
+        font-weight: 300;
+    }
+
+    >.price {
+        color: $primary;
+        font-weight: 200;
+        font-family: 'Pacifico', cursive;
+        font-size: 1.3rem;
+        margin: 0;
+
+        >span {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.buttonsContainer {
+    >button {
+        border: none;
+        z-index: 2;
+        position: absolute;
+        top: 35%;
+        background-color: transparent;
+
+        >svg {
+            height: 1.3rem;
+            width: 1.3rem;
+            color: black;
+        }
+    }
+}
+
+.carouselButtonL {
+    left: 0px;
+
+    &:hover {
+        opacity: .6;
+    }
+}
+
+.carouselButtonR {
+    right: 0px;
+
+    &:hover {
+        opacity: .6;
+    }
+}

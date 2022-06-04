@@ -1,0 +1,107 @@
+@import "../../../styles/mixins";
+
+.optInContainer {
+    position: relative;
+    top: -4px;
+    height: 18rem;
+    padding: .5rem;
+    background-color: $primary;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: $secondary;
+
+    >span {
+        font-size: .6rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        @include sm {
+            font-size: 1rem;
+        }
+
+        >svg {
+            height: 1.5rem;
+            padding-right: 1rem;
+
+            @include sm {
+                height: 2rem;
+            }
+        }
+    }
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include md {
+            flex-direction: row;
+        }
+
+        >p {
+            text-align: center;
+            padding: 0rem 2rem 1rem 2rem;
+
+            @include md {
+                padding-top: 1rem;
+                width: 50%;
+                font-size: 1rem;
+                text-align: left;
+            }
+        }
+
+        >.optInForm {
+            display: flex;
+            flex-direction: column;
+
+            @include sm {
+                flex-direction: row;
+            }
+
+            @include md {
+                padding-right: 2rem;
+                width: 50%;
+            }
+
+            >.textField {
+                padding: .75rem;
+                width: 14rem;
+
+                @include md {
+                    width: 100%;
+                }
+
+                &::placeholder {
+                    color: #bbb;
+                }
+            }
+
+            >.submit {
+                color: white;
+                background-color: transparent;
+                font-size: $button-font-size;
+                padding: $button-padding;
+                border-width: 1px;
+                border-color: white;
+                border-style: $button-border-style;
+                text-transform: $button-text-transform;
+                border-radius: $border-radius;
+                margin-top: 1rem;
+
+                @include sm {
+                    margin-top: 0;
+                    margin-left: 1rem;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    color: #333;
+                    background-color: white;
+                }
+            }
+        }
+    }
+}

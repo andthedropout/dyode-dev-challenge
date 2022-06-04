@@ -1,0 +1,171 @@
+@import "../../styles/mixins";
+
+.header {
+    top: 0px;
+    z-index: 4;
+    height: 4rem;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary;
+
+    @include sm {
+        height: 5.5rem;
+        padding-top: .6rem;
+    }
+
+    >.container {
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+        >.logo {
+            padding: 1rem 0rem 0rem 0rem;
+
+            @include sm {
+                padding-left: 2rem;
+            }
+        }
+
+        >.mobileDrawerBtn {
+            height: 1.5rem;
+            padding: 1.2rem 0rem 0rem 1rem;
+            color: white;
+
+            @include sm {
+                display: none;
+            }
+
+            &:hover {
+                cursor: pointer;
+                opacity: .8;
+            }
+
+            >svg {
+                height: 1.5rem;
+            }
+        }
+    }
+
+    >.checkoutIcons {
+        height: 1.5rem;
+        color: white;
+        padding: 1.4rem 0rem 0rem 0rem;
+        display: flex;
+        justify-content: space-evenly;
+        width: 160px;
+
+        @include sm {
+            padding: 1.6rem 0rem 0rem 0rem;
+        }
+
+        >a {
+            :hover {
+                cursor: pointer;
+                opacity: .8;
+            }
+
+            svg {
+                height: 1.5rem;
+            }
+        }
+    }
+}
+
+.headerLinks {
+    display: none;
+    padding-top: 2rem;
+
+    @include sm {
+        display: block;
+    }
+
+    >a {
+        color: white;
+        font-weight: 400;
+        font-size: .9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1rem;
+
+        @include md {
+            padding: 2rem;
+        }
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+}
+
+.blackOut {
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.slideOut {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    background-color: $primary;
+    color: $secondary;
+    z-index: 6;
+    padding-top: 1rem;
+    padding-left: 1.3rem;
+    height: 100vh;
+    width: 180px;
+
+    >.container {
+        display: flex;
+        padding: .4rem 1.5rem 0rem 0rem;
+        flex-direction: column;
+
+        >a {
+            font-size: 1rem;
+            padding: .5rem 0rem .8rem 0rem;
+        }
+    }
+
+    >.mobileDrawerBtn {
+        padding: 1.2rem 1rem 0rem 1rem;
+        color: $secondary;
+
+        :hover {
+            cursor: pointer;
+            opacity: .8;
+        }
+
+        >svg {
+            height: 1rem;
+        }
+    }
+}
+
+.bannerContainer {
+    background-color: #000;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include sm {
+        height: 3rem;
+    }
+
+    >p {
+        color: white;
+        font-size: .9rem;
+        font-weight: 300;
+        text-align: center;
+        margin: 0;
+        text-transform: uppercase;
+
+        @include md {
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import "variables";
+
+// Media query for mobile first layout
+@mixin sm {
+    @media (min-width: #{$mobile}) {
+      @content;
+    }
+  }
+  
+  // Break on tablet
+  @mixin md {
+    @media (min-width: #{$tablet}) {
+      @content;
+    }
+  }
+  
+  // Break on desktop
+  @mixin lg {
+    @media (min-width: #{$desktop}) {
+      @content;
+    }
+  }

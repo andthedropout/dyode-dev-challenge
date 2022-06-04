@@ -1,0 +1,78 @@
+@import "../../styles/mixins";
+
+.footerContainer {
+    height: 100%;
+    padding: 2rem 2rem 2rem .5rem;
+    background-color: $tertiary;
+    color: $secondary;
+    position: relative;
+    top: -4px;
+
+    @include sm {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+    }
+
+    >.footerLeft {
+        display: flex;
+        flex-direction: column;
+
+        @include sm {
+            flex-direction: row;
+        }
+
+        >div {
+            padding: 1rem;
+        }
+    }
+
+    >.footerRight {
+        padding: 1rem;
+    }
+}
+
+.footerLinksContainer {
+    display: flex;
+    flex-direction: column;
+
+    >a {
+        padding-top: 1rem;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.footerSocialIcons {
+    padding-top: 1rem;
+
+    >a {
+        padding: 1rem .5rem 0rem .5rem;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        >svg {
+            height: 1.6rem;
+        }
+    }
+}
+
+.linksHeader {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    @include sm {
+        cursor: auto;
+    }
+
+    >span {
+        @include sm {
+            display: none;
+        }
+    }
+}

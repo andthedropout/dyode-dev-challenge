@@ -1,0 +1,68 @@
+// Containers
+$x-sm: 600px !default;
+$sm: 800px !default;
+$md: 1000px !default;
+$lg: 1200px !default;
+
+// Breakpoints
+$mobile: $x-sm !default;
+$tablet: $sm !default;
+$desktop: $md !default;
+
+// Colors
+$background: white !default;
+$primary: #114F4E !default;
+$secondary: white !default;
+$tertiary: #000 !default;
+$alternate-background: #efefef !default;
+$alternate-primary: #114F4E !default;
+$alternate-secondary: #000 !default;
+$link-color: $secondary !default;
+$link-hover-color: darken($link-color, 15%) !default;
+
+// Typography
+$font-size: 1rem !default;
+$body-font-size: 1rem !default;
+$font-style: normal !default;
+$font-variant: normal !default;
+$font-weight: normal !default;
+$font-color: #404040 !default;
+$font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
+$line-height: 1.6 !default;
+
+$heading-font-color: #404040 !default;
+$heading-font-weight: 600 !default;
+$heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial,
+  sans-serif !default;
+$heading-line-height: 1.2 !default;
+
+$h1: 1.75rem !default;
+$h2: 1.5rem !default;
+$h3: 1.25rem !default;
+$h4: 1.1rem !default;
+$h5: 1rem !default;
+
+// Spacing
+$padding: 1rem !default;
+$margins: 1.5rem !default;
+
+// Borders
+$border-width: 0px !default;
+$border-style: solid !default;
+$border-color: #dedede !default;
+$border-radius: 0px !default;
+$borders: $border-width $border-style $border-color !default;
+
+// Buttons
+$button-background: $tertiary !default;
+$button-background-hover: darken($button-background, 10%) !default;
+$button-color: white !default;
+$button-font-weight: 500 !default;
+$button-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
+$button-font-size: .8rem !default;
+$button-padding: .8rem 1rem;
+$button-border-width: 0px !default;
+$button-border-style: solid !default;
+$button-border-color: $button-background !default;
+$button-border-radius: $border-radius !default;
+$button-text-transform: uppercase !default;

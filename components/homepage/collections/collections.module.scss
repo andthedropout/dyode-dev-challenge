@@ -1,0 +1,50 @@
+@import "../../../styles/mixins";
+
+.collections {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.collectionBlock {
+    padding: .5rem;
+    min-width: 50%;
+    flex-grow: 2;
+    max-height: 20rem;
+
+    @include sm {
+        min-width: 33%;
+    }
+
+    @include lg {
+        max-height: 28rem;
+    }
+
+    >.imageContainer {
+        overflow: hidden;
+        height: calc(100% - 4rem);
+
+        >span {
+            >span {
+                >img {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+
+    >.textContainer {
+        height: 4rem;
+        background-color: $primary;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $secondary;
+
+        >h2 {
+            margin: 0px;
+        }
+    }
+}
