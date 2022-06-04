@@ -20,7 +20,7 @@ export default function Hero(heroData) {
                 >
                     <Slider>
                         {heroData.data.map((item, i) => (
-                            <Slide index={i} className={styles.slide}>
+                            <Slide key={i} index={i} className={styles.slide}>
                                 <Image className={styles.heroImage}
                                     draggable="false"
                                     src={item.image}

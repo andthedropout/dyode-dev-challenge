@@ -2,11 +2,11 @@ import styles from "./collections.module.scss"
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-export default function ({ name, img, to }) {
+export default function CollectionBlock ({ name, img, to }) {
     return (
         <motion.a whileHover={{ scale: 0.98 }} href={to} className={styles.collectionBlock}>
             <div className={styles.imageContainer}>
-                <Image className={styles.image} src={img} layout={"responsive"} objectfit={"cover"}></Image>
+                <Image alt={name} className={styles.image} src={img} layout={"responsive"} objectfit={"cover"}></Image>
             </div>
             <div className={styles.textContainer}>
                 <h2>

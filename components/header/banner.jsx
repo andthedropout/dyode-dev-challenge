@@ -1,6 +1,6 @@
 import styles from "./header.module.scss"
 
-export default function ({ bannerText }) {
+export default function Banner ({ bannerText }) {
     return (
         <div className={styles.bannerContainer}>
             <p>

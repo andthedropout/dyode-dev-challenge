@@ -1,6 +1,6 @@
 import styles from './opt-in.module.scss'
 
-export default function ({ buttonText }) {
+export default function OptInForm ({ buttonText }) {
 
     var onSubmit = () => {
         alert("Go Check Your Email!")

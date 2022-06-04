@@ -2,10 +2,10 @@ import styles from './products.module.scss'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-export default function ({ to, img, title, subtitle, price }) {
+export default function ProductBlock ({ to, img, title, subtitle, price }) {
     return (<a href={to} className={styles.productBlock}>
         <motion.div whileHover={{ scale: 0.98 }} className={styles.imageContainer}>
-            <Image className={styles.image} src={img} objectfit={"fit"}></Image>
+            <Image alt={title} className={styles.image} src={img} objectfit={"fit"}></Image>
         </motion.div>
         <motion.div whileHover={{ scale: 0.98 }} className={styles.textContainer}>
             <p className={styles.title}>
