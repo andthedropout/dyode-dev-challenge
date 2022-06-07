@@ -40,8 +40,8 @@ export default function Products(productsData) {
                 infinite={true}
             >
                 <Slider>
-                    {productsList.map(({ title, subtitle, price, to, img, id }) => (
-                        <Slide index={id}>
+                    {productsList.map(({ title, subtitle, price, to, img, id }, i) => (
+                        <Slide index={id} key={i}>
                             <ProductBlock title={title} subtitle={subtitle} price={price} to={to} img={img} />
                         </Slide>
                     ))}
