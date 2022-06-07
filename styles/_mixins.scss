@@ -20,3 +20,10 @@
       @content;
     }
   }
+
+  // Break on widescreen
+  @mixin xlg {
+    @media (min-width: #{$wide}) {
+      @content;
+    }
+  }

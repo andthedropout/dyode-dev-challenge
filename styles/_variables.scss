@@ -3,11 +3,13 @@ $x-sm: 600px !default;
 $sm: 800px !default;
 $md: 1000px !default;
 $lg: 1200px !default;
+$xlg: 1400px !default;
 
 // Breakpoints
 $mobile: $x-sm !default;
 $tablet: $sm !default;
 $desktop: $md !default;
+$wide: $xlg !default;
 
 // Colors
 $background: white !default;

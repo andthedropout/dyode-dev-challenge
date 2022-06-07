@@ -20,13 +20,12 @@ export default function Hero(heroData) {
                 >
                     <Slider>
                         {heroData.data.map((item, i) => (
-                            <Slide key={i} index={i} className={styles.slide}>
+                            <Slide key={i} index={i} innerClassName={styles.slide}>
                                 <Image className={styles.heroImage}
                                     draggable="false"
                                     src={item.image}
-                                    key={i}
                                     alt={i}
-                                    objectfit={"cover"}
+                                    width="100%" height="70%" layout="responsive" objectFit="cover"
                                 />
                                 {(heroData.data.length > 1) && <DotGroup className={styles.carouselDots}></DotGroup>}
                                 <span className={item.alignRight ? styles.alignRight : ''}>

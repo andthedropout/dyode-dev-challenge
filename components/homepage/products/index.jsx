@@ -18,6 +18,9 @@ export default function Products(productsData) {
     if (size > 992) {
         visibleSlides = 4;
     }
+    if (size > 1366) {
+        visibleSlides = 5;
+    }
 
     const headerText = productsData.data[0];
     const productsList = productsData.data[1]
@@ -37,8 +40,8 @@ export default function Products(productsData) {
                 infinite={true}
             >
                 <Slider>
-                    {productsList.map(({ title, subtitle, price, to, img, id }, i) => (
-                        <Slide key={i} index={id}>
+                    {productsList.map(({ title, subtitle, price, to, img, id }) => (
+                        <Slide index={id}>
                             <ProductBlock title={title} subtitle={subtitle} price={price} to={to} img={img} />
                         </Slide>
                     ))}

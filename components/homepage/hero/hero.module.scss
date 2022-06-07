@@ -138,3 +138,28 @@
         background-color: $primary;
     }
 }
+
+// .slide {
+//     object-fit: cover;
+//     > span {
+//         width: 100% !important;
+//         height: auto !important;
+//         object-fit: cover;
+//         > img {
+//             height: auto !important;
+//             max-height: auto !important;
+//         }
+//     }
+// }
+
+.slide {
+    @include lg {
+        object-position: center;
+        max-height: calc(100vh - 8.5rem);
+    }
+}
+.heroImage {
+    @include lg {
+        object-position: 65% 50%;
+    }
+}

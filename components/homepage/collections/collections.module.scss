@@ -20,6 +20,9 @@
     @include lg {
         max-height: 28rem;
     }
+    @include xlg {
+        max-height: 42rem;
+    }
 
     >.imageContainer {
         overflow: hidden;
